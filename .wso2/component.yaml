@@ -1,0 +1,14 @@
+# Endpoint declaration for the WSO2 Integration Platform.
+# Needed until the platform auto-detects endpoints for the mcp-server component type.
+schemaVersion: 1.1
+
+endpoints:
+  - name: mcp_service
+    displayName: Orders MCP Service
+    service:
+      # The MCP service itself is at /mcp under this base path.
+      basePath: /
+      port: 9090
+    type: REST
+    networkVisibilities:
+      - Public
